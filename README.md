@@ -7,12 +7,10 @@
 
 | Project | What it is | Stack |
 | :--- | :--- | :--- |
-| **FitChallenge** | 1v1 live workout duels. Reps are counted by on-device pose detection — the video never leaves the phone. | `SwiftUI` `Vision` `Firebase` |
-| **Fauxvegas** | A free web casino, no real money. No build step, no dependencies, native ES modules. | `Vanilla JS` `HTML5` |
-| **HomeService BXL** | Home services across Brussels — online quotes, interactive commune map, installable PWA. | `JavaScript` `PWA` `SEO` |
-| **Meridian** | Digital storefront for small businesses and shops. Hand-rolled animations, zero framework. | `HTML` `CSS` `JavaScript` |
-
-<sub>Sources currently private — happy to walk through any of them on request.</sub>
+| **[FitChallenge](https://github.com/amndrd/fitnesstrack-platform)** | 1v1 live workout duels. Reps are counted by on-device pose detection — the video never leaves the phone. | `SwiftUI` `Vision` `Firebase` |
+| **[Fauxvegas](https://github.com/amndrd/probability-engine)** | A free web casino, no real money. No build step, no dependencies, native ES modules. | `Vanilla JS` `HTML5` |
+| **[HomeService BXL](https://github.com/amndrd/homeservice-bxl)** | Home services across Brussels — online quotes, interactive commune map, installable PWA. | `JavaScript` `PWA` `SEO` |
+| **[Meridian](https://github.com/amndrd/Meridian)** | Digital storefront for small businesses and shops. Hand-rolled animations, zero framework. | `HTML` `CSS` `JavaScript` |
 
 ## Toolbox
 
