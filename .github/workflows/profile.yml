@@ -19,6 +19,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Same job on purpose: the push below replaces the whole output branch.
+      # Cards go first — the snake runs in a root container that leaves dist/ read-only.
+      - name: Generate the stats cards
+        run: python3 scripts/cards.py dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate the snake SVGs
         uses: Platane/snk@v3
         with:
@@ -26,12 +33,6 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-
-      # Same job on purpose: the push below replaces the whole output branch.
-      - name: Generate the stats cards
-        run: python3 scripts/cards.py dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push everything to the output branch
         uses: crazy-max/ghaction-github-pages@v4
