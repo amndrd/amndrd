@@ -39,33 +39,6 @@
   <img alt="Contribution graph, eaten by a snake" src="https://raw.githubusercontent.com/amndrd/amndrd/output/github-snake.svg" width="100%">
 </picture>
 
-## Contribution animations
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/skyline-dark.svg">
-  <img alt="Contributions as a 3D skyline" src="https://raw.githubusercontent.com/amndrd/amndrd/output/skyline-light.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/invaders-dark.svg">
-  <img alt="Contributions as Space Invaders" src="https://raw.githubusercontent.com/amndrd/amndrd/output/invaders-light.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/tetris-dark.svg">
-  <img alt="Contributions as Tetris" src="https://raw.githubusercontent.com/amndrd/amndrd/output/tetris-light.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/life-dark.svg">
-  <img alt="Contributions seeding Conway's Game of Life" src="https://raw.githubusercontent.com/amndrd/amndrd/output/life-light.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/pacman-dark.svg">
-  <img alt="Contributions eaten by Pac-Man" src="https://raw.githubusercontent.com/amndrd/amndrd/output/pacman-light.svg" width="100%">
-</picture>
-
 <!-- chess:start -->
 ## ♟️ Community chess
 

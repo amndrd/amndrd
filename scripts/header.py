@@ -12,11 +12,34 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from animations import Timeline
 from cards import THEMES, esc, graphql
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
+
+
+class Timeline:
+    """One looping @keyframes per element, written in seconds rather than percentages."""
+
+    def __init__(self, duration):
+        self.duration, self.rules = duration, []
+
+    def __call__(self, stops, timing="linear"):
+        name = f"k{len(self.rules)}"
+        stops = sorted(stops, key=lambda stop: stop[0])
+        if stops[0][0] > 0:
+            stops.insert(0, (0, stops[0][1]))
+        if stops[-1][0] < self.duration:
+            stops.append((self.duration, stops[-1][1]))
+        frames = "".join(f"{min(time / self.duration * 100, 100):.3f}%{{{css}}}" for time, css in stops)
+        self.rules.append(f"@keyframes {name}{{{frames}}}"
+                          f".{name}{{animation:{name} {self.duration:.2f}s {timing} infinite}}")
+        return name
+
+    @property
+    def css(self):
+        return "\n".join(self.rules)
+
 
 # Corners of the four cards in assets/banner.jpg (1280×640), measured by hand.
 CARDS = (
