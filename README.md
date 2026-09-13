@@ -1,10 +1,5 @@
 <img alt="Four phones showing black American Express cards" src="https://raw.githubusercontent.com/amndrd/amndrd/output/banner.svg" width="100%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/terminal-dark.svg">
-  <img alt="Terminal session: whoami, stack and recent projects" src="https://raw.githubusercontent.com/amndrd/amndrd/output/terminal-light.svg" width="100%">
-</picture>
-
 ## Core skills
 
 <picture>
