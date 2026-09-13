@@ -42,7 +42,7 @@
 <!-- chess:start -->
 ## ♟️ Community chess
 
-Anyone can play. Pick a move below, click **Create** on the issue that opens, and a GitHub Action plays it within a minute.
+Pick a move below, click **Create** on the issue that opens.
 
 <p align="center"><img src="https://raw.githubusercontent.com/amndrd/amndrd/main/chess/board.svg?v=0-2" width="400" alt="Chess board after 2 moves"></p>
 

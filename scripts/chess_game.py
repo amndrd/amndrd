@@ -71,8 +71,7 @@ def render(state):
     lines = [
         "## ♟️ Community chess",
         "",
-        "Anyone can play. Pick a move below, click **Create** on the issue that opens, "
-        "and a GitHub Action plays it within a minute.",
+        "Pick a move below, click **Create** on the issue that opens.",
         "",
         f'<p align="center"><img src="https://raw.githubusercontent.com/{REPO}/main/chess/board.svg?v={len(state["games"])}-{ply}" '
         f'width="400" alt="Chess board after {ply} moves"></p>',
