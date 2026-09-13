@@ -29,10 +29,15 @@
       "uci": "g8f6",
       "san": "Nf6",
       "user": "amndrd"
+    },
+    {
+      "uci": "b5d7",
+      "san": "Bxd7+",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 6
+    "amndrd": 7
   },
   "games": []
 }
