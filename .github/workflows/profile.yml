@@ -21,8 +21,11 @@ jobs:
 
       # Same job on purpose: the push below replaces the whole output branch.
       # Cards go first — the snake runs in a root container that leaves dist/ read-only.
-      - name: Generate the stats cards
-        run: python3 scripts/cards.py dist
+      - name: Generate the cards, animations and header
+        run: |
+          python3 scripts/cards.py dist
+          python3 scripts/animations.py dist
+          python3 scripts/header.py dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -1,0 +1,59 @@
+name: Community chess
+
+on:
+  issues:
+    types: [opened]
+
+# Moves are applied one at a time, in the order the issues were opened.
+concurrency:
+  group: chess
+  cancel-in-progress: false
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, 'chess|')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install chess==1.11.2
+
+      # The issue title is untrusted input: it only ever reaches the script through the environment.
+      - name: Play the move
+        id: play
+        run: python3 scripts/chess_game.py play
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          REPLY_FILE: ${{ runner.temp }}/reply.md
+
+      - name: Commit the new position
+        if: steps.play.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add chess README.md
+          git commit -m "Chess: $SUMMARY"
+          for attempt in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1
+        env:
+          SUMMARY: ${{ steps.play.outputs.summary }}
+
+      - name: Reply and close the issue
+        run: |
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$REPLY_FILE"
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.issue.number }}
+          REPLY_FILE: ${{ runner.temp }}/reply.md
