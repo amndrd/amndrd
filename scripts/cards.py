@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Render the profile README cards as theme-aware SVGs, straight from the GitHub API.
 
-Public card services (github-readme-stats, activity-graph, trophies…) keep getting
-paused or rate-limited, so the cards are drawn here and served from the `output`
-branch instead. Standard library only.
+Public card services (github-readme-stats, activity-graph…) keep getting paused or
+rate-limited, so the cards are drawn here and served from the `output` branch
+instead. Standard library only.
 
 Usage: GITHUB_TOKEN=… python3 scripts/cards.py <output-dir> [login]
 """
@@ -23,13 +23,11 @@ FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,
 THEMES = {
     "dark": {
         "bg": "#0d1117", "border": "#30363d", "title": "#e6edf3", "text": "#c9d1d9",
-        "muted": "#8b949e", "accent": "#58a6ff", "grid": "#21262d", "fire": "#f78166",
-        "gold": "#e3b341", "silver": "#b1bac4", "bronze": "#db8a4a", "locked": "#484f58",
+        "muted": "#8b949e", "accent": "#58a6ff", "grid": "#21262d",
     },
     "light": {
         "bg": "#ffffff", "border": "#d0d7de", "title": "#1f2328", "text": "#1f2328",
-        "muted": "#656d76", "accent": "#0969da", "grid": "#eaeef2", "fire": "#cf222e",
-        "gold": "#bf8700", "silver": "#8c959f", "bronze": "#b35900", "locked": "#afb8c1",
+        "muted": "#656d76", "accent": "#0969da", "grid": "#eaeef2",
     },
 }
 
@@ -45,17 +43,16 @@ ICONS = {
 PROFILE_QUERY = """
 query($login: String!, $cursor: String) {
   user(login: $login) {
-    name login createdAt
+    name login
     followers { totalCount }
     pullRequests { totalCount }
     issues { totalCount }
     repositoriesContributedTo(includeUserRepositories: true,
       contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]) { totalCount }
     repositories(first: 100, after: $cursor, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
-      totalCount
       pageInfo { hasNextPage endCursor }
       nodes {
-        stargazerCount
+        name stargazerCount
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name color } }
         }
@@ -103,25 +100,19 @@ def fetch(login):
             break
         cursor = page["repositories"]["pageInfo"]["endCursor"]
 
-    # contributionsCollection spans at most a year: walk back one window at a time.
     today = datetime.now(timezone.utc).date()
-    created = date.fromisoformat(user["createdAt"][:10])
-    days, windows, end = {}, [], today
-    while end >= created:
-        start = max(end - timedelta(days=364), created)
-        window = graphql(CALENDAR_QUERY, login=login,
-                         **{"from": f"{start}T00:00:00Z", "to": f"{end}T23:59:59Z"})["contributionsCollection"]
-        windows.append(window)
-        for week in window["contributionCalendar"]["weeks"]:
-            for day in week["contributionDays"]:
-                when = date.fromisoformat(day["date"])
-                if start <= when <= end:
-                    days[when] = day["contributionCount"]
-        end = start - timedelta(days=1)
+    start = today - timedelta(days=364)
+    year = graphql(CALENDAR_QUERY, login=login,
+                   **{"from": f"{start}T00:00:00Z", "to": f"{today}T23:59:59Z"})["contributionsCollection"]
+    days = {date.fromisoformat(day["date"]): day["contributionCount"]
+            for week in year["contributionCalendar"]["weeks"] for day in week["contributionDays"]}
 
     # Every repo weighs the same: one generated 10 MB HTML export shouldn't drown the rest.
+    # The profile repo itself is skipped, or this very script would count as a Python project.
     shares, colors = defaultdict(float), {}
     for repo in repos:
+        if repo["name"].lower() == login.lower():
+            continue
         edges = repo["languages"]["edges"]
         total = sum(edge["size"] for edge in edges)
         for edge in edges:
@@ -130,19 +121,15 @@ def fetch(login):
 
     return {
         "name": user["name"] or user["login"],
-        "created": created,
         "today": today,
         "days": days,
-        "total": sum(days.values()),
         "stars": sum(repo["stargazerCount"] for repo in repos),
-        "repos": user["repositories"]["totalCount"],
         "followers": user["followers"]["totalCount"],
         "prs": user["pullRequests"]["totalCount"],
         "issues": user["issues"]["totalCount"],
         "contributed_to": user["repositoriesContributedTo"]["totalCount"],
-        "commits_year": windows[0]["totalCommitContributions"],
-        "commits_total": sum(window["totalCommitContributions"] for window in windows),
-        "reviews_year": windows[0]["totalPullRequestReviewContributions"],
+        "commits_year": year["totalCommitContributions"],
+        "reviews_year": year["totalPullRequestReviewContributions"],
         "languages": sorted(((name, share, colors[name]) for name, share in shares.items()),
                             key=lambda item: -item[1]),
     }
@@ -168,24 +155,6 @@ def rank(stats):
     return "C", percentile
 
 
-def streaks(days, today):
-    longest, run, run_start = (0, None, None), 0, None
-    for day in sorted(days):
-        if days[day]:
-            run_start = day if run == 0 else run_start
-            run += 1
-            if run > longest[0]:
-                longest = (run, run_start, day)
-        else:
-            run = 0
-    # Today doesn't break the streak until it's over.
-    end = today if days.get(today) else today - timedelta(days=1)
-    cursor = end
-    while days.get(cursor):
-        cursor -= timedelta(days=1)
-    return ((end - cursor).days, cursor + timedelta(days=1), end), longest
-
-
 # ---------------------------------------------------------------- drawing helpers
 
 def esc(text):
@@ -194,14 +163,6 @@ def esc(text):
 
 def short_date(day, today):
     return f"{day:%b} {day.day}" + ("" if day.year == today.year else f", {day.year}")
-
-
-def date_range(start, end, today):
-    if start is None:
-        return "No streak yet"
-    if start == end:
-        return short_date(start, today)
-    return f"{short_date(start, today)} – {short_date(end, today)}"
 
 
 def svg(theme, width, height, label, body, heading=None, subheading=None, css=""):
@@ -331,40 +292,7 @@ def stats_card(stats, theme):
     return svg(theme, 495, 195, f"{stats['name']}'s GitHub stats", "\n".join(body),
                heading=f"{stats['name']}'s GitHub stats",
                css=".ring { animation: ring 1.2s ease-out both; }"
-                   f" @keyframes ring {{ from {{ stroke-dasharray: 0 100; }} }}")
-
-
-def streak_card(stats, theme):
-    t = THEMES[theme]
-    (current, current_start, current_end), (longest, longest_start, longest_end) = streaks(stats["days"], stats["today"])
-    today = stats["today"]
-    if current:
-        current_caption = date_range(current_start, current_end, today)
-    else:
-        active = [day for day, count in stats["days"].items() if count]
-        current_caption = f"Last contribution: {short_date(max(active), today)}" if active else "No streak yet"
-    flame ="M0,-13 C5,-7 10,-3 10,4 A10,10 0 0 1 -10,4 C-10,-2 -6,-4 -5,-9 C-2,-6 -1,-5 0,-13 Z"
-    body = f"""<line x1="165" x2="165" y1="35" y2="160" stroke="{t["border"]}"/>
-<line x1="330" x2="330" y1="35" y2="160" stroke="{t["border"]}"/>
-<g class="fade" style="animation-delay:.1s">
-  <text x="82.5" y="92" text-anchor="middle" font-size="28" font-weight="700" fill="{t["title"]}">{stats["total"]:,}</text>
-  <text x="82.5" y="124" text-anchor="middle" class="label">Total contributions</text>
-  <text x="82.5" y="148" text-anchor="middle" class="small">{short_date(stats["created"], today)} – Present</text>
-</g>
-<g class="fade" style="animation-delay:.3s">
-  <circle cx="247.5" cy="82" r="40" fill="none" stroke="{t["fire"]}" stroke-width="5"/>
-  <circle cx="247.5" cy="42" r="13" fill="{t["bg"]}"/>
-  <path transform="translate(247.5 44)" d="{flame}" fill="{t["fire"]}"/>
-  <text x="247.5" y="93" text-anchor="middle" font-size="28" font-weight="700" fill="{t["title"]}">{current:,}</text>
-  <text x="247.5" y="148" text-anchor="middle" class="label" font-weight="700" fill="{t["fire"]}">Current streak</text>
-  <text x="247.5" y="170" text-anchor="middle" class="small">{current_caption}</text>
-</g>
-<g class="fade" style="animation-delay:.5s">
-  <text x="412.5" y="92" text-anchor="middle" font-size="28" font-weight="700" fill="{t["title"]}">{longest:,}</text>
-  <text x="412.5" y="124" text-anchor="middle" class="label">Longest streak</text>
-  <text x="412.5" y="148" text-anchor="middle" class="small">{date_range(longest_start, longest_end, today)}</text>
-</g>"""
-    return svg(theme, 495, 195, f"{stats['name']}'s contribution streak", body)
+                   " @keyframes ring { from { stroke-dasharray: 0 100; } }")
 
 
 def languages_card(stats, theme):
@@ -401,81 +329,10 @@ def languages_card(stats, theme):
                heading="Most used languages", subheading="each repo weighs the same")
 
 
-def rhythm_card(stats, theme):
-    t = THEMES[theme]
-    per_weekday = [0] * 7
-    for offset in range(364):
-        day = stats["today"] - timedelta(days=offset)
-        per_weekday[day.weekday()] += stats["days"].get(day, 0)
-    peak = max(per_weekday) or 1
-    top, bottom, bar = 70, 160, 40
-    body = []
-    for i, (label, value) in enumerate(zip(("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"), per_weekday)):
-        bar_x = 45 + i * 60
-        bar_h = max(value / peak * (bottom - top), 2)
-        opacity = 1 if value == peak and value else 0.45
-        body.append(f'<rect x="{bar_x}" y="{bottom - bar_h:.1f}" width="{bar}" height="{bar_h:.1f}" rx="5" '
-                    f'fill="{t["accent"]}" opacity="{opacity}" class="grow" style="animation-delay:{i * 0.07:.2f}s"/>'
-                    f'<text x="{bar_x + bar / 2}" y="{bottom - bar_h - 7:.1f}" class="small" text-anchor="middle" '
-                    f'style="fill:{t["title"]}">{value:,}</text>'
-                    f'<text x="{bar_x + bar / 2}" y="{bottom + 20}" class="small" text-anchor="middle">{label}</text>')
-    return svg(theme, 495, 195, "Contributions per weekday", "\n".join(body),
-               heading="Weekly rhythm", subheading="contributions per weekday · last 12 months",
-               css=".grow { transform-box: fill-box; transform-origin: 50% 100%; animation: grow .7s ease-out both; }"
-                   " @keyframes grow { from { transform: scaleY(0); } }")
-
-
-RANKS = ("C", "B", "A", "AA", "AAA", "S", "SS", "SSS")
-TROPHIES = (
-    ("Commits", "commits_total", "commits", (1, 10, 100, 250, 500, 1000, 2000, 4000)),
-    ("Contributions", "total", "contributions", (1, 50, 100, 250, 500, 1000, 2500, 5000)),
-    ("Longest streak", "longest", "days", (1, 3, 7, 14, 30, 60, 100, 365)),
-    ("Repositories", "repos", "public repos", (1, 3, 5, 10, 20, 30, 40, 50)),
-    ("Pull requests", "prs", "pull requests", (1, 5, 10, 25, 50, 100, 250, 500)),
-    ("Stars", "stars", "stars", (1, 5, 10, 25, 50, 100, 250, 1000)),
-)
-
-
-def trophies_card(stats, theme):
-    t = THEMES[theme]
-    values = dict(stats, longest=streaks(stats["days"], stats["today"])[1][0])
-    width, cell, gap = 850, 128, 16
-    start = (width - 6 * cell - 5 * gap) / 2
-    body = []
-    for i, (title, key, unit, thresholds) in enumerate(TROPHIES):
-        value = values[key]
-        reached = sum(value >= threshold for threshold in thresholds)
-        if reached == 0:
-            level, color, progress = "?", t["locked"], value / thresholds[0]
-        else:
-            level = RANKS[reached - 1]
-            color = t["gold"] if reached > 5 else t["silver"] if reached > 2 else t["bronze"]
-            progress = 1 if reached == len(thresholds) else (
-                (value - thresholds[reached - 1]) / (thresholds[reached] - thresholds[reached - 1]))
-        cx = start + i * (cell + gap) + cell / 2
-        body.append(f"""<g class="fade" style="animation-delay:{i * 0.1:.1f}s">
-  <g transform="translate({cx:.1f} 58)" fill="{color}">
-    <path d="M-22,-30 H22 V-12 A22,22 0 0 1 -22,-12 Z"/>
-    <path d="M-21,-25 C-35,-25 -35,-2 -18,-2 M21,-25 C35,-25 35,-2 18,-2" fill="none" stroke="{color}" stroke-width="4" stroke-linecap="round"/>
-    <rect x="-4" y="8" width="8" height="12"/>
-    <rect x="-17" y="19" width="34" height="7" rx="2"/>
-    <text y="-8" text-anchor="middle" font-size="{15 if len(level) < 3 else 12}" font-weight="800" fill="{t["bg"]}">{level}</text>
-  </g>
-  <text x="{cx:.1f}" y="112" text-anchor="middle" class="value">{title}</text>
-  <text x="{cx:.1f}" y="130" text-anchor="middle" class="small">{value:,} {unit}</text>
-  <line x1="{cx - 40:.1f}" x2="{cx + 40:.1f}" y1="146" y2="146" stroke="{t["grid"]}" stroke-width="4" stroke-linecap="round"/>
-  <line x1="{cx - 40:.1f}" x2="{cx - 40 + 80 * min(progress, 1):.1f}" y1="146" y2="146" stroke="{color}" stroke-width="4" stroke-linecap="round"/>
-</g>""")
-    return svg(theme, width, 170, f"{stats['name']}'s GitHub trophies", "\n".join(body))
-
-
 CARDS = {
     "activity": activity_card,
     "stats": stats_card,
-    "streak": streak_card,
     "languages": languages_card,
-    "rhythm": rhythm_card,
-    "trophies": trophies_card,
 }
 
 
@@ -489,8 +346,8 @@ def main():
     for theme in THEMES:
         for name, render in CARDS.items():
             (out / f"{name}-{theme}.svg").write_text(render(stats, theme), encoding="utf-8")
-    print(f"{login}: {stats['total']} contributions, {stats['commits_total']} commits, "
-          f"{stats['stars']} stars, rank {rank(stats)[0]} → {len(CARDS) * len(THEMES)} cards in {out}/")
+    print(f"{login}: {stats['commits_year']} commits in the last 12 months, {stats['stars']} stars, "
+          f"rank {rank(stats)[0]} → {len(CARDS) * len(THEMES)} cards in {out}/")
 
 
 if __name__ == "__main__":
