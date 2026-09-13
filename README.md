@@ -30,5 +30,3 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/github-snake-dark.svg">
   <img alt="Contribution graph, eaten by a snake" src="https://raw.githubusercontent.com/amndrd/amndrd/output/github-snake.svg" width="100%">
 </picture>
-
-<sub>↑ all of it is redrawn every night by a <a href="https://github.com/amndrd/amndrd/blob/main/.github/workflows/profile.yml">GitHub Action</a> straight from the GitHub API — no third-party card service.</sub>
