@@ -42,7 +42,7 @@
 <!-- chess:start -->
 ## ♟️ Community chess
 
-Pick a move below, click **Create** on the issue that opens.
+Pick a move below, click **Create** on the issue that opens (take a min to load).
 
 <p align="center"><img src="https://raw.githubusercontent.com/amndrd/amndrd/main/chess/board.svg?v=0-2" width="400" alt="Chess board after 2 moves"></p>
 
