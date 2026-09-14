@@ -49,10 +49,15 @@
       "uci": "f6d5",
       "san": "Nxd5",
       "user": "amndrd"
+    },
+    {
+      "uci": "b1c3",
+      "san": "Nc3",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 10
+    "amndrd": 11
   },
   "games": []
 }
