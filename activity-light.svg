@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="320" viewBox="0 0 850 320" role="img" aria-label="amnd&#x27;s contribution graph">
+<title>amnd&#x27;s contribution graph</title>
+<style>
+  svg { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #1f2328; }
+  .heading { font-size: 16px; font-weight: 600; fill: #1f2328; }
+  .label { font-size: 13px; }
+  .value { font-size: 13px; font-weight: 600; fill: #1f2328; }
+  .small { font-size: 11px; fill: #656d76; }
+  .fade { animation: fade .6s ease-out both; }
+  @keyframes fade { from { opacity: 0; } }
+  .draw { stroke-dasharray: 1; animation: draw 1.8s ease-out both; } @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="849" height="319" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<text x="25" y="36" class="heading">amnd&#x27;s contribution graph</text><text x="825" y="36" class="small" text-anchor="end">last 31 days · 199 contributions</text>
+<line x1="62" x2="822" y1="256.0" y2="256.0" stroke="#eaeef2"/>
+<text x="48" y="260.0" class="small" text-anchor="end">0</text>
+<line x1="62" x2="822" y1="209.5" y2="209.5" stroke="#eaeef2"/>
+<text x="48" y="213.5" class="small" text-anchor="end">10</text>
+<line x1="62" x2="822" y1="163.0" y2="163.0" stroke="#eaeef2"/>
+<text x="48" y="167.0" class="small" text-anchor="end">20</text>
+<line x1="62" x2="822" y1="116.5" y2="116.5" stroke="#eaeef2"/>
+<text x="48" y="120.5" class="small" text-anchor="end">30</text>
+<line x1="62" x2="822" y1="70.0" y2="70.0" stroke="#eaeef2"/>
+<text x="48" y="74.0" class="small" text-anchor="end">40</text>
+<text x="62.0" y="278" class="small" text-anchor="middle">16</text>
+<text x="62.0" y="296" class="small" text-anchor="middle" font-weight="600">Aug</text>
+<text x="87.3" y="278" class="small" text-anchor="middle">17</text>
+<text x="112.7" y="278" class="small" text-anchor="middle">18</text>
+<text x="138.0" y="278" class="small" text-anchor="middle">19</text>
+<text x="163.3" y="278" class="small" text-anchor="middle">20</text>
+<text x="188.7" y="278" class="small" text-anchor="middle">21</text>
+<text x="214.0" y="278" class="small" text-anchor="middle">22</text>
+<text x="239.3" y="278" class="small" text-anchor="middle">23</text>
+<text x="264.7" y="278" class="small" text-anchor="middle">24</text>
+<text x="290.0" y="278" class="small" text-anchor="middle">25</text>
+<text x="315.3" y="278" class="small" text-anchor="middle">26</text>
+<text x="340.7" y="278" class="small" text-anchor="middle">27</text>
+<text x="366.0" y="278" class="small" text-anchor="middle">28</text>
+<text x="391.3" y="278" class="small" text-anchor="middle">29</text>
+<text x="416.7" y="278" class="small" text-anchor="middle">30</text>
+<text x="442.0" y="278" class="small" text-anchor="middle">31</text>
+<text x="467.3" y="278" class="small" text-anchor="middle">1</text>
+<text x="467.3" y="296" class="small" text-anchor="middle" font-weight="600">Sep</text>
+<text x="492.7" y="278" class="small" text-anchor="middle">2</text>
+<text x="518.0" y="278" class="small" text-anchor="middle">3</text>
+<text x="543.3" y="278" class="small" text-anchor="middle">4</text>
+<text x="568.7" y="278" class="small" text-anchor="middle">5</text>
+<text x="594.0" y="278" class="small" text-anchor="middle">6</text>
+<text x="619.3" y="278" class="small" text-anchor="middle">7</text>
+<text x="644.7" y="278" class="small" text-anchor="middle">8</text>
+<text x="670.0" y="278" class="small" text-anchor="middle">9</text>
+<text x="695.3" y="278" class="small" text-anchor="middle">10</text>
+<text x="720.7" y="278" class="small" text-anchor="middle">11</text>
+<text x="746.0" y="278" class="small" text-anchor="middle">12</text>
+<text x="771.3" y="278" class="small" text-anchor="middle">13</text>
+<text x="796.7" y="278" class="small" text-anchor="middle">14</text>
+<text x="822.0" y="278" class="small" text-anchor="middle">15</text>
+<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0969da" stop-opacity=".35"/><stop offset="1" stop-color="#0969da" stop-opacity="0"/>
+</linearGradient></defs>
+<path d="M62.0,237.4 C70.4,239.0 78.9,242.1 87.3,242.1 C95.8,242.1 104.2,242.1 112.7,232.8 C121.1,223.4 129.6,130.4 138.0,130.4 C146.4,130.4 154.9,242.1 163.3,242.1 C171.8,242.1 180.2,237.4 188.7,237.4 C197.1,237.4 205.6,251.3 214.0,251.3 C222.4,251.3 230.9,218.8 239.3,218.8 C247.8,218.8 256.2,256.0 264.7,256.0 C273.1,256.0 281.6,229.7 290.0,218.8 C298.4,208.0 306.9,190.9 315.3,190.9 C323.8,190.9 332.2,223.4 340.7,223.4 C349.1,223.4 357.6,158.3 366.0,158.3 C374.4,158.3 382.9,223.7 391.3,228.1 C399.8,232.5 408.2,231.1 416.7,232.8 C425.1,234.4 433.6,256.0 442.0,256.0 C450.4,256.0 458.9,209.5 467.3,209.5 C475.8,209.5 484.2,214.9 492.7,218.8 C501.1,222.7 509.6,232.8 518.0,232.8 C526.4,232.8 534.9,214.2 543.3,214.2 C551.8,214.2 560.2,251.3 568.7,251.3 C577.1,251.3 585.6,209.5 594.0,209.5 C602.4,209.5 610.9,256.0 619.3,256.0 C627.8,256.0 636.2,224.2 644.7,214.2 C653.1,204.1 661.6,195.6 670.0,195.6 C678.4,195.6 686.9,256.0 695.3,256.0 C703.8,256.0 712.2,256.0 720.7,256.0 C729.1,256.0 737.6,256.0 746.0,256.0 C754.4,256.0 762.9,190.9 771.3,190.9 C779.8,190.9 788.2,226.6 796.7,237.4 C805.1,248.3 813.6,249.8 822.0,256.0 L822,256 L62,256 Z" fill="url(#area)" class="fade" style="animation-delay:.9s"/>
+<path d="M62.0,237.4 C70.4,239.0 78.9,242.1 87.3,242.1 C95.8,242.1 104.2,242.1 112.7,232.8 C121.1,223.4 129.6,130.4 138.0,130.4 C146.4,130.4 154.9,242.1 163.3,242.1 C171.8,242.1 180.2,237.4 188.7,237.4 C197.1,237.4 205.6,251.3 214.0,251.3 C222.4,251.3 230.9,218.8 239.3,218.8 C247.8,218.8 256.2,256.0 264.7,256.0 C273.1,256.0 281.6,229.7 290.0,218.8 C298.4,208.0 306.9,190.9 315.3,190.9 C323.8,190.9 332.2,223.4 340.7,223.4 C349.1,223.4 357.6,158.3 366.0,158.3 C374.4,158.3 382.9,223.7 391.3,228.1 C399.8,232.5 408.2,231.1 416.7,232.8 C425.1,234.4 433.6,256.0 442.0,256.0 C450.4,256.0 458.9,209.5 467.3,209.5 C475.8,209.5 484.2,214.9 492.7,218.8 C501.1,222.7 509.6,232.8 518.0,232.8 C526.4,232.8 534.9,214.2 543.3,214.2 C551.8,214.2 560.2,251.3 568.7,251.3 C577.1,251.3 585.6,209.5 594.0,209.5 C602.4,209.5 610.9,256.0 619.3,256.0 C627.8,256.0 636.2,224.2 644.7,214.2 C653.1,204.1 661.6,195.6 670.0,195.6 C678.4,195.6 686.9,256.0 695.3,256.0 C703.8,256.0 712.2,256.0 720.7,256.0 C729.1,256.0 737.6,256.0 746.0,256.0 C754.4,256.0 762.9,190.9 771.3,190.9 C779.8,190.9 788.2,226.6 796.7,237.4 C805.1,248.3 813.6,249.8 822.0,256.0" fill="none" stroke="#0969da" stroke-width="2.5" stroke-linejoin="round" pathLength="1" class="draw"/>
+<circle cx="62.0" cy="237.4" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.20s"><title>Aug 16: 4</title></circle>
+<circle cx="87.3" cy="242.1" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.25s"><title>Aug 17: 3</title></circle>
+<circle cx="112.7" cy="232.8" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.30s"><title>Aug 18: 5</title></circle>
+<circle cx="138.0" cy="130.4" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.35s"><title>Aug 19: 27</title></circle>
+<circle cx="163.3" cy="242.1" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.40s"><title>Aug 20: 3</title></circle>
+<circle cx="188.7" cy="237.4" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.45s"><title>Aug 21: 4</title></circle>
+<circle cx="214.0" cy="251.3" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.50s"><title>Aug 22: 1</title></circle>
+<circle cx="239.3" cy="218.8" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.55s"><title>Aug 23: 8</title></circle>
+<circle cx="264.7" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.60s"><title>Aug 24: 0</title></circle>
+<circle cx="290.0" cy="218.8" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.65s"><title>Aug 25: 8</title></circle>
+<circle cx="315.3" cy="190.9" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.70s"><title>Aug 26: 14</title></circle>
+<circle cx="340.7" cy="223.4" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.75s"><title>Aug 27: 7</title></circle>
+<circle cx="366.0" cy="158.3" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.80s"><title>Aug 28: 21</title></circle>
+<circle cx="391.3" cy="228.1" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.85s"><title>Aug 29: 6</title></circle>
+<circle cx="416.7" cy="232.8" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.90s"><title>Aug 30: 5</title></circle>
+<circle cx="442.0" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:0.95s"><title>Aug 31: 0</title></circle>
+<circle cx="467.3" cy="209.5" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.00s"><title>Sep 1: 10</title></circle>
+<circle cx="492.7" cy="218.8" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.05s"><title>Sep 2: 8</title></circle>
+<circle cx="518.0" cy="232.8" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.10s"><title>Sep 3: 5</title></circle>
+<circle cx="543.3" cy="214.2" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.15s"><title>Sep 4: 9</title></circle>
+<circle cx="568.7" cy="251.3" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.20s"><title>Sep 5: 1</title></circle>
+<circle cx="594.0" cy="209.5" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.25s"><title>Sep 6: 10</title></circle>
+<circle cx="619.3" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.30s"><title>Sep 7: 0</title></circle>
+<circle cx="644.7" cy="214.2" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.35s"><title>Sep 8: 9</title></circle>
+<circle cx="670.0" cy="195.6" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.40s"><title>Sep 9: 13</title></circle>
+<circle cx="695.3" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.45s"><title>Sep 10: 0</title></circle>
+<circle cx="720.7" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.50s"><title>Sep 11: 0</title></circle>
+<circle cx="746.0" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.55s"><title>Sep 12: 0</title></circle>
+<circle cx="771.3" cy="190.9" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.60s"><title>Sep 13: 14</title></circle>
+<circle cx="796.7" cy="237.4" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.65s"><title>Sep 14: 4</title></circle>
+<circle cx="822.0" cy="256.0" r="3.5" fill="#ffffff" stroke="#0969da" stroke-width="2" class="fade" style="animation-delay:1.70s"><title>Sep 15: 0</title></circle>
+</svg>
