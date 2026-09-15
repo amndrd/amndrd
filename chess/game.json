@@ -64,10 +64,15 @@
       "uci": "d2d4",
       "san": "d4",
       "user": "amndrd"
+    },
+    {
+      "uci": "c8a6",
+      "san": "Ba6",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 13
+    "amndrd": 14
   },
   "games": []
 }
