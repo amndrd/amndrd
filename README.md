@@ -34,7 +34,7 @@
 </picture>
 
 <!-- chess:start -->
-## ♟️ Community chess
+## Community chess
 
 Pick a move below, click **Create** on the issue that opens (take a min to load).
 
