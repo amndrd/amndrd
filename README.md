@@ -10,8 +10,7 @@
 - **Languages:** Swift · Python · TypeScript · JavaScript · HTML · CSS
 - **Mobile:** SwiftUI · Vision (on-device pose detection) · Firebase Auth, Firestore & Realtime Database · Google Sign-In
 - **Web:** Next.js · React · Three.js · PWAs · vanilla ES modules
-- **Backend & automation:** FastAPI · Typer · Playwright · Telegram bots
-- **Tooling:** Git · GitHub Actions · Vercel · Netlify
+- **Backend & automation:** FastAPI · Typer · Playwright · Automation bots
 
 ## GitHub activity
 
