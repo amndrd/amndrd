@@ -8,7 +8,7 @@
 </picture>
 
 - **Languages:** Swift · Python · TypeScript · JavaScript · HTML · CSS
-- **Mobile:** SwiftUI · Vision (on-device pose detection) · Firebase Auth, Firestore & Realtime Database · Google Sign-In
+- **Mobile:** SwiftUI · Vision (on-device pose detection) · Firebase Auth, Firestore & Realtime Database · Sign-In Authentification
 - **Web:** Next.js · React · Three.js · PWAs · vanilla ES modules
 - **Backend & automation:** FastAPI · Typer · Playwright · Automation bots
 
