@@ -94,10 +94,15 @@
       "uci": "f3e5",
       "san": "Ne5+",
       "user": "amndrd"
+    },
+    {
+      "uci": "d7c8",
+      "san": "Kc8",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 19
+    "amndrd": 20
   },
   "games": []
 }
