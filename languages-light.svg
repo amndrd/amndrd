@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Most used languages">
+<title>Most used languages</title>
+<style>
+  svg { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #1f2328; }
+  .heading { font-size: 16px; font-weight: 600; fill: #1f2328; }
+  .label { font-size: 13px; }
+  .value { font-size: 13px; font-weight: 600; fill: #1f2328; }
+  .small { font-size: 11px; fill: #656d76; }
+  .fade { animation: fade .6s ease-out both; }
+  @keyframes fade { from { opacity: 0; } }
+  
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<text x="25" y="36" class="heading">Most used languages</text><text x="470" y="36" class="small" text-anchor="end">each repo weighs the same</text>
+<circle cx="110" cy="112" r="50" fill="none" stroke="#e34c26" stroke-width="20" pathLength="100" stroke-dasharray="22.64 77.36" stroke-dashoffset="-0.00" transform="rotate(-90 110 112)"><title>HTML: 23.2%</title></circle>
+<circle cx="110" cy="112" r="50" fill="none" stroke="#3572A5" stroke-width="20" pathLength="100" stroke-dasharray="21.99 78.01" stroke-dashoffset="-23.24" transform="rotate(-90 110 112)"><title>Python: 22.6%</title></circle>
+<circle cx="110" cy="112" r="50" fill="none" stroke="#f1e05a" stroke-width="20" pathLength="100" stroke-dasharray="20.20 79.80" stroke-dashoffset="-45.84" transform="rotate(-90 110 112)"><title>JavaScript: 20.8%</title></circle>
+<circle cx="110" cy="112" r="50" fill="none" stroke="#663399" stroke-width="20" pathLength="100" stroke-dasharray="16.01 83.99" stroke-dashoffset="-66.64" transform="rotate(-90 110 112)"><title>CSS: 16.6%</title></circle>
+<circle cx="110" cy="112" r="50" fill="none" stroke="#F05138" stroke-width="20" pathLength="100" stroke-dasharray="11.90 88.10" stroke-dashoffset="-83.25" transform="rotate(-90 110 112)"><title>Swift: 12.5%</title></circle>
+<circle cx="110" cy="112" r="50" fill="none" stroke="#656d76" stroke-width="20" pathLength="100" stroke-dasharray="3.65 96.35" stroke-dashoffset="-95.75" transform="rotate(-90 110 112)"><title>Other: 4.3%</title></circle>
+<text x="110" y="114" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">23%</text><text x="110" y="130" text-anchor="middle" class="small">HTML</text>
+<g class="fade" style="animation-delay:0.10s"><circle cx="215" cy="68" r="5" fill="#e34c26"/><text x="230" y="72" class="label">HTML</text><line x1="330" x2="430.0" y1="68" y2="68" stroke="#e34c26" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="470" y="72" class="small" text-anchor="end">23.2%</text></g>
+<g class="fade" style="animation-delay:0.18s"><circle cx="215" cy="89" r="5" fill="#3572A5"/><text x="230" y="93" class="label">Python</text><line x1="330" x2="427.2" y1="89" y2="89" stroke="#3572A5" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="470" y="93" class="small" text-anchor="end">22.6%</text></g>
+<g class="fade" style="animation-delay:0.26s"><circle cx="215" cy="110" r="5" fill="#f1e05a"/><text x="230" y="114" class="label">JavaScript</text><line x1="330" x2="419.5" y1="110" y2="110" stroke="#f1e05a" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="470" y="114" class="small" text-anchor="end">20.8%</text></g>
+<g class="fade" style="animation-delay:0.34s"><circle cx="215" cy="131" r="5" fill="#663399"/><text x="230" y="135" class="label">CSS</text><line x1="330" x2="401.5" y1="131" y2="131" stroke="#663399" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="470" y="135" class="small" text-anchor="end">16.6%</text></g>
+<g class="fade" style="animation-delay:0.42s"><circle cx="215" cy="152" r="5" fill="#F05138"/><text x="230" y="156" class="label">Swift</text><line x1="330" x2="383.8" y1="152" y2="152" stroke="#F05138" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="470" y="156" class="small" text-anchor="end">12.5%</text></g>
+<g class="fade" style="animation-delay:0.50s"><circle cx="215" cy="173" r="5" fill="#656d76"/><text x="230" y="177" class="label">Other</text><line x1="330" x2="348.3" y1="173" y2="173" stroke="#656d76" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="470" y="177" class="small" text-anchor="end">4.3%</text></g>
+</svg>
