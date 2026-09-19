@@ -49,10 +49,6 @@ def issue_link(title):
     return f"https://github.com/{REPO}/issues/new?title={quote(title)}&body={quote(body)}"
 
 
-def user_link(login):
-    return f'<a href="https://github.com/{login}">@{login}</a>'
-
-
 def outcome_text(outcome):
     if outcome.winner is None:
         return f"Draw by {outcome.termination.name.replace('_', ' ').lower()}"
@@ -69,7 +65,7 @@ def render(state):
 
     ply, outcome = len(state["moves"]), board.outcome(claim_draw=True)
     lines = [
-        "## ♟️ Community chess",
+        "## Community chess",
         "",
         "Pick a move below, click **Create** on the issue that opens (take a min to load).",
         "",
@@ -82,8 +78,6 @@ def render(state):
         status.append(f"<b>{outcome_text(outcome)}</b>")
     else:
         status.append(f"<b>{'White' if board.turn else 'Black'} to play</b> · move {board.fullmove_number}")
-    if state["moves"]:
-        status.append(f"last move <b>{state['moves'][-1]['san']}</b> by {user_link(state['moves'][-1]['user'])}")
     lines += [f'<p align="center">{" · ".join(status)}</p>', ""]
 
     if outcome:
@@ -100,14 +94,6 @@ def render(state):
             lines.append(f"| {piece.unicode_symbol()} {chess.square_name(square)} | {links} |")
         lines.append("")
 
-    if state["moves"]:
-        rows = [f"| {i // 2 + 1}{'.' if i % 2 == 0 else '…'} | {move['san']} | {user_link(move['user'])} |"
-                for i, move in enumerate(state["moves"])]
-        lines += ["<details><summary>Moves so far</summary>", "", "| # | Move | Player |", "| :-- | :-- | :-- |",
-                  *rows, "", "</details>", ""]
-    if state["players"]:
-        top = sorted(state["players"].items(), key=lambda item: (-item[1], item[0].lower()))[:5]
-        lines += ["**Top players:** " + " · ".join(f"{user_link(login)} ({count})" for login, count in top), ""]
     if state["games"]:
         lines += [f"<sub>{len(state['games'])} finished game{'s' if len(state['games']) > 1 else ''} so far.</sub>", ""]
 
