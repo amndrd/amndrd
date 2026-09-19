@@ -20,11 +20,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Same job on purpose: the push below replaces the whole output branch.
-      - name: Generate the cards, header and snake
+      - name: Generate the cards and header
         run: |
           python3 scripts/cards.py dist
           python3 scripts/header.py dist
-          python3 scripts/snake.py dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
