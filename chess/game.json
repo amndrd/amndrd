@@ -139,10 +139,15 @@
       "uci": "c8b7",
       "san": "Kb7",
       "user": "amndrd"
+    },
+    {
+      "uci": "c6a7",
+      "san": "Nxa7",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 28
+    "amndrd": 29
   },
   "games": []
 }
