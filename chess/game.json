@@ -134,10 +134,15 @@
       "uci": "g4e6",
       "san": "Qxe6+",
       "user": "amndrd"
+    },
+    {
+      "uci": "c8b7",
+      "san": "Kb7",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 27
+    "amndrd": 28
   },
   "games": []
 }
