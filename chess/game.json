@@ -164,10 +164,15 @@
       "uci": "e6a6",
       "san": "Qxa6+",
       "user": "amndrd"
+    },
+    {
+      "uci": "a8b8",
+      "san": "Kb8",
+      "user": "amndrd"
     }
   ],
   "players": {
-    "amndrd": 33
+    "amndrd": 34
   },
   "games": []
 }
