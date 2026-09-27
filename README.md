@@ -27,24 +27,3 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amndrd/amndrd/output/languages-dark.svg">
   <img alt="Most used languages" src="https://raw.githubusercontent.com/amndrd/amndrd/output/languages-light.svg" width="49%">
 </picture>
-
-<!-- chess:start -->
-## Community chess
-
-Pick a move below, click **Create** on the issue that opens (take a min to load).
-
-<p align="center"><img src="https://raw.githubusercontent.com/amndrd/amndrd/main/chess/board.svg?v=0-35" width="400" alt="Chess board after 35 moves"></p>
-
-<p align="center"><b>Black to play</b> · move 18</p>
-
-| Piece | Moves |
-| :--- | :--- |
-| ♟ b5 | [b4](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cb5b4%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-| ♟ g6 | [g5](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cg6g5%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-| ♟ c7 | [c5](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cc7c5%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [c6](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cc7c6%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-| ♟ f7 | [f5](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cf7f5%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [f6](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cf7f6%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-| ♟ h7 | [h5](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Ch7h5%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [h6](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Ch7h6%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-| ♝ g7 | [Be5](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cg7e5%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Bf6](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cg7f6%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Bf8](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cg7f8%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Bh6](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cg7h6%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Bxd4](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Cg7d4%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-| ♜ h8 | [Re8+](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Ch8e8%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Rf8](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Ch8f8%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Rg8](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Ch8g8%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) · [Rxd8](https://github.com/amndrd/amndrd/issues/new?title=chess%7Cmove%7Ch8d8%7C35&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20your%20move%20is%20already%20in%20the%20title.%20A%20GitHub%20Action%20plays%20it%20within%20a%20minute.) |
-
-<!-- chess:end -->
