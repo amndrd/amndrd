@@ -158,6 +158,7 @@ def rank(stats):
 # ---------------------------------------------------------------- drawing helpers
 
 def esc(text):
+    """Escape any value for safe use inside SVG text and attributes."""
     return html.escape(str(text))
 
 
