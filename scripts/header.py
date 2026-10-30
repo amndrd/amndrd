@@ -24,6 +24,7 @@ CARDS = (
 
 
 def banner():
+    """Banner photo with an animated sheen clipped to the four cards."""
     image = base64.b64encode((ASSETS / "banner.jpg").read_bytes()).decode()
     clip = "".join(f'<polygon points="{" ".join(f"{x},{y}" for x, y in card)}"/>' for card in CARDS)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Four phones showing black American Express cards">
