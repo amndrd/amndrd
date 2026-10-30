@@ -163,6 +163,7 @@ def esc(text):
 
 
 def short_date(day, today):
+    """Format as "Oct 30", adding the year only when it differs from today's."""
     return f"{day:%b} {day.day}" + ("" if day.year == today.year else f", {day.year}")
 
 
