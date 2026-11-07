@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="320" viewBox="0 0 850 320" role="img" aria-label="amnd&#x27;s contribution graph">
+<title>amnd&#x27;s contribution graph</title>
+<style>
+  svg { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #c9d1d9; }
+  .heading { font-size: 16px; font-weight: 600; fill: #e6edf3; }
+  .label { font-size: 13px; }
+  .value { font-size: 13px; font-weight: 600; fill: #e6edf3; }
+  .small { font-size: 11px; fill: #8b949e; }
+  .fade { animation: fade .6s ease-out both; }
+  @keyframes fade { from { opacity: 0; } }
+  .draw { stroke-dasharray: 1; animation: draw 1.8s ease-out both; } @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="849" height="319" rx="10" fill="#0d1117" stroke="#30363d"/>
+<text x="25" y="36" class="heading">amnd&#x27;s contribution graph</text><text x="825" y="36" class="small" text-anchor="end">last 31 days · 309 contributions</text>
+<line x1="62" x2="822" y1="256.0" y2="256.0" stroke="#21262d"/>
+<text x="48" y="260.0" class="small" text-anchor="end">0</text>
+<line x1="62" x2="822" y1="209.5" y2="209.5" stroke="#21262d"/>
+<text x="48" y="213.5" class="small" text-anchor="end">10</text>
+<line x1="62" x2="822" y1="163.0" y2="163.0" stroke="#21262d"/>
+<text x="48" y="167.0" class="small" text-anchor="end">20</text>
+<line x1="62" x2="822" y1="116.5" y2="116.5" stroke="#21262d"/>
+<text x="48" y="120.5" class="small" text-anchor="end">30</text>
+<line x1="62" x2="822" y1="70.0" y2="70.0" stroke="#21262d"/>
+<text x="48" y="74.0" class="small" text-anchor="end">40</text>
+<text x="62.0" y="278" class="small" text-anchor="middle">8</text>
+<text x="62.0" y="296" class="small" text-anchor="middle" font-weight="600">Oct</text>
+<text x="87.3" y="278" class="small" text-anchor="middle">9</text>
+<text x="112.7" y="278" class="small" text-anchor="middle">10</text>
+<text x="138.0" y="278" class="small" text-anchor="middle">11</text>
+<text x="163.3" y="278" class="small" text-anchor="middle">12</text>
+<text x="188.7" y="278" class="small" text-anchor="middle">13</text>
+<text x="214.0" y="278" class="small" text-anchor="middle">14</text>
+<text x="239.3" y="278" class="small" text-anchor="middle">15</text>
+<text x="264.7" y="278" class="small" text-anchor="middle">16</text>
+<text x="290.0" y="278" class="small" text-anchor="middle">17</text>
+<text x="315.3" y="278" class="small" text-anchor="middle">18</text>
+<text x="340.7" y="278" class="small" text-anchor="middle">19</text>
+<text x="366.0" y="278" class="small" text-anchor="middle">20</text>
+<text x="391.3" y="278" class="small" text-anchor="middle">21</text>
+<text x="416.7" y="278" class="small" text-anchor="middle">22</text>
+<text x="442.0" y="278" class="small" text-anchor="middle">23</text>
+<text x="467.3" y="278" class="small" text-anchor="middle">24</text>
+<text x="492.7" y="278" class="small" text-anchor="middle">25</text>
+<text x="518.0" y="278" class="small" text-anchor="middle">26</text>
+<text x="543.3" y="278" class="small" text-anchor="middle">27</text>
+<text x="568.7" y="278" class="small" text-anchor="middle">28</text>
+<text x="594.0" y="278" class="small" text-anchor="middle">29</text>
+<text x="619.3" y="278" class="small" text-anchor="middle">30</text>
+<text x="644.7" y="278" class="small" text-anchor="middle">31</text>
+<text x="670.0" y="278" class="small" text-anchor="middle">1</text>
+<text x="670.0" y="296" class="small" text-anchor="middle" font-weight="600">Nov</text>
+<text x="695.3" y="278" class="small" text-anchor="middle">2</text>
+<text x="720.7" y="278" class="small" text-anchor="middle">3</text>
+<text x="746.0" y="278" class="small" text-anchor="middle">4</text>
+<text x="771.3" y="278" class="small" text-anchor="middle">5</text>
+<text x="796.7" y="278" class="small" text-anchor="middle">6</text>
+<text x="822.0" y="278" class="small" text-anchor="middle">7</text>
+<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#58a6ff" stop-opacity=".35"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+</linearGradient></defs>
+<path d="M62.0,242.1 C70.4,228.1 78.9,200.2 87.3,200.2 C95.8,200.2 104.2,200.2 112.7,200.2 C121.1,200.2 129.6,181.6 138.0,181.6 C146.4,181.6 154.9,204.8 163.3,204.8 C171.8,204.8 180.2,197.1 188.7,186.2 C197.1,175.4 205.6,139.8 214.0,139.8 C222.4,139.8 230.9,214.2 239.3,214.2 C247.8,214.2 256.2,181.6 264.7,181.6 C273.1,181.6 281.6,197.9 290.0,204.8 C298.4,211.8 306.9,214.9 315.3,223.4 C323.8,232.0 332.2,256.0 340.7,256.0 C349.1,256.0 357.6,223.4 366.0,209.5 C374.4,195.6 382.9,172.3 391.3,172.3 C399.8,172.3 408.2,181.6 416.7,181.6 C425.1,181.6 433.6,181.6 442.0,181.6 C450.4,181.6 458.9,197.1 467.3,209.5 C475.8,221.9 484.2,256.0 492.7,256.0 C501.1,256.0 509.6,256.0 518.0,256.0 C526.4,256.0 534.9,209.5 543.3,209.5 C551.8,209.5 560.2,209.5 568.7,209.5 C577.1,209.5 585.6,186.2 594.0,186.2 C602.4,186.2 610.9,197.9 619.3,209.5 C627.8,221.1 636.2,256.0 644.7,256.0 C653.1,256.0 661.6,245.9 670.0,237.4 C678.4,228.9 686.9,204.8 695.3,204.8 C703.8,204.8 712.2,228.1 720.7,228.1 C729.1,228.1 737.6,163.0 746.0,163.0 C754.4,163.0 762.9,228.1 771.3,228.1 C779.8,228.1 788.2,209.5 796.7,209.5 C805.1,209.5 813.6,240.5 822.0,256.0 L822,256 L62,256 Z" fill="url(#area)" class="fade" style="animation-delay:.9s"/>
+<path d="M62.0,242.1 C70.4,228.1 78.9,200.2 87.3,200.2 C95.8,200.2 104.2,200.2 112.7,200.2 C121.1,200.2 129.6,181.6 138.0,181.6 C146.4,181.6 154.9,204.8 163.3,204.8 C171.8,204.8 180.2,197.1 188.7,186.2 C197.1,175.4 205.6,139.8 214.0,139.8 C222.4,139.8 230.9,214.2 239.3,214.2 C247.8,214.2 256.2,181.6 264.7,181.6 C273.1,181.6 281.6,197.9 290.0,204.8 C298.4,211.8 306.9,214.9 315.3,223.4 C323.8,232.0 332.2,256.0 340.7,256.0 C349.1,256.0 357.6,223.4 366.0,209.5 C374.4,195.6 382.9,172.3 391.3,172.3 C399.8,172.3 408.2,181.6 416.7,181.6 C425.1,181.6 433.6,181.6 442.0,181.6 C450.4,181.6 458.9,197.1 467.3,209.5 C475.8,221.9 484.2,256.0 492.7,256.0 C501.1,256.0 509.6,256.0 518.0,256.0 C526.4,256.0 534.9,209.5 543.3,209.5 C551.8,209.5 560.2,209.5 568.7,209.5 C577.1,209.5 585.6,186.2 594.0,186.2 C602.4,186.2 610.9,197.9 619.3,209.5 C627.8,221.1 636.2,256.0 644.7,256.0 C653.1,256.0 661.6,245.9 670.0,237.4 C678.4,228.9 686.9,204.8 695.3,204.8 C703.8,204.8 712.2,228.1 720.7,228.1 C729.1,228.1 737.6,163.0 746.0,163.0 C754.4,163.0 762.9,228.1 771.3,228.1 C779.8,228.1 788.2,209.5 796.7,209.5 C805.1,209.5 813.6,240.5 822.0,256.0" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linejoin="round" pathLength="1" class="draw"/>
+<circle cx="62.0" cy="242.1" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.20s"><title>Oct 8: 3</title></circle>
+<circle cx="87.3" cy="200.2" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.25s"><title>Oct 9: 12</title></circle>
+<circle cx="112.7" cy="200.2" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.30s"><title>Oct 10: 12</title></circle>
+<circle cx="138.0" cy="181.6" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.35s"><title>Oct 11: 16</title></circle>
+<circle cx="163.3" cy="204.8" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.40s"><title>Oct 12: 11</title></circle>
+<circle cx="188.7" cy="186.2" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.45s"><title>Oct 13: 15</title></circle>
+<circle cx="214.0" cy="139.8" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.50s"><title>Oct 14: 25</title></circle>
+<circle cx="239.3" cy="214.2" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.55s"><title>Oct 15: 9</title></circle>
+<circle cx="264.7" cy="181.6" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.60s"><title>Oct 16: 16</title></circle>
+<circle cx="290.0" cy="204.8" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.65s"><title>Oct 17: 11</title></circle>
+<circle cx="315.3" cy="223.4" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.70s"><title>Oct 18: 7</title></circle>
+<circle cx="340.7" cy="256.0" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.75s"><title>Oct 19: 0</title></circle>
+<circle cx="366.0" cy="209.5" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.80s"><title>Oct 20: 10</title></circle>
+<circle cx="391.3" cy="172.3" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.85s"><title>Oct 21: 18</title></circle>
+<circle cx="416.7" cy="181.6" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.90s"><title>Oct 22: 16</title></circle>
+<circle cx="442.0" cy="181.6" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:0.95s"><title>Oct 23: 16</title></circle>
+<circle cx="467.3" cy="209.5" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.00s"><title>Oct 24: 10</title></circle>
+<circle cx="492.7" cy="256.0" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.05s"><title>Oct 25: 0</title></circle>
+<circle cx="518.0" cy="256.0" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.10s"><title>Oct 26: 0</title></circle>
+<circle cx="543.3" cy="209.5" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.15s"><title>Oct 27: 10</title></circle>
+<circle cx="568.7" cy="209.5" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.20s"><title>Oct 28: 10</title></circle>
+<circle cx="594.0" cy="186.2" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.25s"><title>Oct 29: 15</title></circle>
+<circle cx="619.3" cy="209.5" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.30s"><title>Oct 30: 10</title></circle>
+<circle cx="644.7" cy="256.0" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.35s"><title>Oct 31: 0</title></circle>
+<circle cx="670.0" cy="237.4" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.40s"><title>Nov 1: 4</title></circle>
+<circle cx="695.3" cy="204.8" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.45s"><title>Nov 2: 11</title></circle>
+<circle cx="720.7" cy="228.1" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.50s"><title>Nov 3: 6</title></circle>
+<circle cx="746.0" cy="163.0" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.55s"><title>Nov 4: 20</title></circle>
+<circle cx="771.3" cy="228.1" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.60s"><title>Nov 5: 6</title></circle>
+<circle cx="796.7" cy="209.5" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.65s"><title>Nov 6: 10</title></circle>
+<circle cx="822.0" cy="256.0" r="3.5" fill="#0d1117" stroke="#58a6ff" stroke-width="2" class="fade" style="animation-delay:1.70s"><title>Nov 7: 0</title></circle>
+</svg>
