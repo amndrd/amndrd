@@ -1,5 +1,3 @@
-<img alt="Four phones showing black American Express cards" src="https://raw.githubusercontent.com/amndrd/amndrd/output/banner.svg" width="100%">
-
 ## Core skills
 
 <picture>
