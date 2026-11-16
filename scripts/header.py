@@ -51,6 +51,7 @@ def banner():
 
 
 def skills(theme, size=48, gap=12, per_line=8):
+    """Skill icon grid that pops in one icon at a time, then waves gently on a loop."""
     # skillicons.dev wraps every icon in its own positioned <g>; cut the sheet at those boundaries.
     sheet = (ASSETS / f"skillicons-{theme}.svg").read_text()
     starts = list(re.finditer(r'<g transform="translate\(\d+, \d+\)">', sheet))
