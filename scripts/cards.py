@@ -346,6 +346,7 @@ CARDS = {
 
 
 def main():
+    """Fetch the stats once, then write every card in every theme to the output directory."""
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     out = Path(sys.argv[1])
