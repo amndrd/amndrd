@@ -92,6 +92,7 @@ def graphql(query, **variables):
 
 
 def fetch(login):
+    """Gather profile totals, the last year of daily contributions and per-repo language shares."""
     user, repos, cursor = None, [], None
     while True:
         page = graphql(PROFILE_QUERY, login=login, cursor=cursor)
