@@ -198,6 +198,7 @@ def svg(theme, width, height, label, body, heading=None, subheading=None, css=""
 
 
 def nice_ceiling(peak, ticks=4):
+    """Round the axis top up to a readable value split into evenly spaced ticks; returns (top, step)."""
     raw = max(peak, ticks) / ticks
     magnitude = 10 ** math.floor(math.log10(raw))
     step = next(m * magnitude for m in (1, 2, 2.5, 5, 10) if m * magnitude >= raw)
