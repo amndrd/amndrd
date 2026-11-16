@@ -170,6 +170,7 @@ def short_date(day, today):
 
 
 def svg(theme, width, height, label, body, heading=None, subheading=None, css=""):
+    """Wrap a card body in the shared themed SVG frame, with an optional heading and subheading."""
     t = THEMES[theme]
     head = ""
     if heading:
