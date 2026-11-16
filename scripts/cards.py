@@ -304,6 +304,7 @@ def stats_card(stats, theme):
 
 
 def languages_card(stats, theme):
+    """Top five languages by average share across repos, with the remainder grouped as Other."""
     t = THEMES[theme]
     languages = stats["languages"]
     total = sum(share for _, share, _ in languages) or 1
