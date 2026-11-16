@@ -74,6 +74,7 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 
 
 def graphql(query, **variables):
+    """POST a GraphQL query to the GitHub API and return its user object, exiting on errors."""
     request = urllib.request.Request(
         "https://api.github.com/graphql",
         data=json.dumps({"query": query, "variables": variables}).encode(),
