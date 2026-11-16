@@ -232,6 +232,7 @@ def monotone_path(points):
 # ---------------------------------------------------------------- cards
 
 def activity_card(stats, theme):
+    """Line chart of daily contributions over the last 31 days."""
     t = THEMES[theme]
     width, height = 850, 320
     left, right, top, bottom = 62, 822, 70, 256
