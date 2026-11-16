@@ -272,6 +272,7 @@ def activity_card(stats, theme):
 
 
 def stats_card(stats, theme):
+    """Headline numbers (stars, commits, PRs, issues...) next to the overall rank ring."""
     t = THEMES[theme]
     rows = [
         ("star", "Total stars earned", stats["stars"]),
